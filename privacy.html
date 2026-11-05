@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Informativa privacy WA-MCP · Francesco Capparelli</title>
-    <meta name="description" content="Informativa sul trattamento dei dati personali e istruzioni per l'eliminazione dei dati del servizio WA-MCP.">
+    <title>Privacy · Francesco Capparelli</title>
+    <meta name="description" content="Informative sul trattamento dei dati personali del sito francescocapparelli.it e dei servizi di Francesco Capparelli, tra cui WA-MCP.">
     <link rel="canonical" href="https://francescocapparelli.it/privacy.html">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <style>
@@ -17,114 +17,211 @@
         main { max-width: 780px; margin: 0 auto; padding: 40px 16px 64px; }
         h1 { font-size: 1.8rem; line-height: 1.25; margin: 0 0 6px; }
         h2 { font-size: 1.15rem; margin: 32px 0 8px; }
-        p, li { color: var(--text); }
         .muted { color: var(--muted); }
         a { color: var(--accent); }
         .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin-top: 12px; }
         button.link { background: none; border: 0; padding: 0; color: var(--accent); font: inherit; text-decoration: underline; cursor: pointer; }
         nav { margin-bottom: 24px; }
+        .picker { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 20px 0 8px; padding: 14px 16px;
+                  background: var(--surface); border: 1px solid var(--border); border-radius: 12px; }
+        .picker label { font-weight: 600; }
+        .picker select { font: inherit; padding: 8px 12px; border-radius: 8px; border: 1px solid var(--border);
+                         background: var(--bg); color: var(--text); min-width: 0; max-width: 100%; }
+        .doc[hidden] { display: none; }
+        hr { margin: 48px 0; border: 0; border-top: 1px solid var(--border); }
     </style>
 </head>
 <body>
 <main>
     <nav><a href="./">← Francesco Capparelli</a></nav>
 
-    <h1>Informativa privacy del servizio WA-MCP</h1>
-    <p class="muted">Ultimo aggiornamento: 5 novembre 2026 · <a href="#english">English version below</a></p>
+    <h1>Informative privacy</h1>
+    <p class="muted">Francesco Capparelli eroga più servizi: scegli l'informativa che ti interessa. ·
+        <span lang="en">Choose the privacy policy you need.</span></p>
 
-    <h2>1. Titolare del trattamento</h2>
-    <div class="card">
-        <p><strong>Francesco Capparelli</strong> — impresa individuale<br>
-            Piazza Giovanni XXIII, 12 · 87100 Cosenza (CS) · Italia<br>
-            P.IVA 03978070781<br>
-            Contatto: <button class="link contact" type="button">scrivi una email</button></p>
+    <div class="picker">
+        <label for="doc-select">Informativa per</label>
+        <select id="doc-select" aria-controls="sito wa-mcp">
+            <option value="sito">Sito web francescocapparelli.it</option>
+            <option value="wa-mcp">WA-MCP (WhatsApp Business &amp; AI)</option>
+        </select>
     </div>
 
-    <h2>2. Che cos'è WA-MCP</h2>
-    <p>WA-MCP è un servizio che consente alle aziende di collegare i propri account WhatsApp Business (tramite la
-        WhatsApp Business Platform di Meta) e di gestire le conversazioni con i clienti da un'interfaccia web e tramite
-        assistenti di intelligenza artificiale autorizzati dall'azienda. Per i messaggi scambiati tra un'azienda e i suoi
-        clienti, l'azienda è titolare del trattamento e WA-MCP agisce come responsabile del trattamento per suo conto.</p>
+    <!-- ====================================================== SITO WEB -->
+    <section class="doc" id="sito" aria-label="Informativa privacy del sito web">
+        <h1>Informativa privacy del sito web</h1>
+        <p class="muted">Ultimo aggiornamento: 5 novembre 2026 · <a href="#sito-en">English version below</a></p>
 
-    <h2>3. Quali dati trattiamo</h2>
-    <ul>
-        <li><strong>Dati degli account collegati:</strong> identificativi dell'account WhatsApp Business e dei numeri di telefono,
-            nome visualizzato, stato di qualità e il token di accesso concesso dall'azienda (conservato cifrato).</li>
-        <li><strong>Dati dei contatti:</strong> numero di telefono o identificativo WhatsApp, nome del profilo, eventuale nome
-            salvato in rubrica dall'azienda.</li>
-        <li><strong>Contenuto delle conversazioni:</strong> messaggi inviati e ricevuti, relativi stati di consegna e lettura,
-            riferimenti ai file multimediali; per gli account che usano anche l'app WhatsApp Business, la cronologia che
-            l'azienda decide di condividere.</li>
-        <li><strong>Dati degli operatori:</strong> credenziali di accesso all'interfaccia e registro delle operazioni.</li>
-    </ul>
+        <h2>1. Titolare del trattamento</h2>
+        <div class="card">
+            <p><strong>Francesco Capparelli</strong> — impresa individuale<br>
+                Piazza Giovanni XXIII, 12 · 87100 Cosenza (CS) · Italia<br>
+                P.IVA 03978070781<br>
+                Contatto: <button class="link contact" type="button" data-subject="Privacy sito web">scrivi una email</button></p>
+        </div>
 
-    <h2>4. Finalità e base giuridica</h2>
-    <p>Trattiamo i dati esclusivamente per fornire il servizio richiesto dall'azienda: ricevere, archiviare, visualizzare
-        e inviare messaggi WhatsApp, anche tramite assistenti automatici autorizzati. La base giuridica è l'esecuzione del
-        contratto con l'azienda cliente (art. 6.1.b GDPR); per i clienti finali dell'azienda, la base giuridica è quella
-        individuata dall'azienda titolare. I dati non vengono venduti, non sono usati per pubblicità e non sono usati per
-        addestrare modelli di intelligenza artificiale.</p>
+        <h2>2. Quali dati trattiamo</h2>
+        <ul>
+            <li><strong>Navigazione:</strong> il sito non usa cookie, né strumenti di analisi o di tracciamento, né contenuti di terze parti che profilano i visitatori.</li>
+            <li><strong>Preferenze:</strong> la lingua e il tema chiaro/scuro scelti vengono salvati solo nel tuo browser (memoria locale) e non vengono inviati a noi.</li>
+            <li><strong>Dati tecnici del servizio di hosting:</strong> il sito è ospitato su GitHub Pages (GitHub, Inc.), che per sicurezza e funzionamento può registrare dati tecnici come l'indirizzo IP del visitatore.</li>
+            <li><strong>Contatti:</strong> se ci scrivi via email trattiamo i dati che ci invii (nome, indirizzo email, contenuto del messaggio) per risponderti.</li>
+        </ul>
 
-    <h2>5. Dove sono conservati e per quanto tempo</h2>
-    <p>I dati sono conservati su server nell'Unione Europea gestiti dal titolare. I messaggi restano archiviati finché
-        l'azienda mantiene attivo il servizio; alla disattivazione o su richiesta vengono cancellati entro 30 giorni.
-        I token di accesso sono cifrati e cancellati quando l'account viene scollegato.</p>
+        <h2>3. Finalità e base giuridica</h2>
+        <p>Rendere disponibile il sito e rispondere alle richieste di contatto o di preventivo (legittimo interesse e misure precontrattuali, art. 6.1.b e 6.1.f GDPR). I dati non vengono venduti né usati per pubblicità.</p>
 
-    <h2>6. Destinatari</h2>
-    <p>I messaggi transitano attraverso la WhatsApp Business Platform di Meta Platforms, secondo le condizioni di WhatsApp.
-        Se l'azienda collega un assistente di intelligenza artificiale, i contenuti necessari a rispondere sono resi
-        disponibili a quell'assistente sotto il controllo dell'azienda. Non comunichiamo i dati ad altri soggetti, salvo
-        obblighi di legge.</p>
+        <h2>4. Conservazione</h2>
+        <p>Le email ricevute sono conservate per il tempo necessario a gestire la richiesta e l'eventuale rapporto professionale, e comunque nel rispetto degli obblighi di legge.</p>
 
-    <h2>7. Diritti</h2>
-    <p>Puoi chiedere accesso, rettifica, cancellazione, limitazione o portabilità dei tuoi dati e opporti al trattamento,
-        scrivendo al titolare (punto 1) o all'azienda con cui stai conversando. Puoi presentare reclamo al Garante per la
-        protezione dei dati personali (<a href="https://www.garanteprivacy.it/" rel="noopener">garanteprivacy.it</a>).
-        Scrivendo <strong>STOP</strong> in una conversazione smetterai di ricevere messaggi avviati dall'azienda.</p>
+        <h2>5. Diritti</h2>
+        <p>Puoi chiedere accesso, rettifica, cancellazione, limitazione o portabilità dei tuoi dati e opporti al trattamento scrivendo al titolare. Puoi presentare reclamo al Garante per la protezione dei dati personali (<a href="https://www.garanteprivacy.it/" rel="noopener">garanteprivacy.it</a>).</p>
 
-    <h2 id="eliminazione-dati">8. Come richiedere l'eliminazione dei dati</h2>
-    <div class="card">
-        <ol>
-            <li>Scrivi al titolare tramite il contatto al punto 1, indicando il numero WhatsApp o l'account WhatsApp Business
-                interessato e l'oggetto "Eliminazione dati WA-MCP".</li>
-            <li>Le aziende possono anche scollegare il proprio account dall'interfaccia di WA-MCP o rimuovere l'accesso
-                dell'app dalle impostazioni del proprio portfolio business su Meta.</li>
-            <li>Confermeremo la cancellazione di messaggi, contatti e token entro 30 giorni dalla richiesta.</li>
-        </ol>
-    </div>
+        <div lang="en" id="sito-en">
+            <h2>Website privacy policy (English)</h2>
+            <p><strong>Controller:</strong> Francesco Capparelli, sole proprietorship, Piazza Giovanni XXIII 12, 87100 Cosenza, Italy, VAT IT03978070781 —
+                <button class="link contact" type="button" data-subject="Website privacy">contact by email</button>.</p>
+            <p>This website uses no cookies, analytics or tracking. Your language and theme choices are stored only in your browser.
+                The site is hosted on GitHub Pages (GitHub, Inc.), which may log technical data such as IP addresses for security.
+                If you email us, we process the data you send only to reply. You may exercise your GDPR rights by contacting the controller
+                and lodge a complaint with the Italian Data Protection Authority.</p>
+        </div>
+    </section>
 
-    <hr style="margin:48px 0;border:0;border-top:1px solid var(--border)">
+    <!-- ====================================================== WA-MCP -->
+    <section class="doc" id="wa-mcp" aria-label="Informativa privacy del servizio WA-MCP">
+        <h1>Informativa privacy del servizio WA-MCP</h1>
+        <p class="muted">Ultimo aggiornamento: 5 novembre 2026 · <a href="#english">English version below</a></p>
 
-    <h1 id="english" lang="en">WA-MCP Privacy Policy (English)</h1>
-    <div lang="en">
-        <p><strong>Controller:</strong> Francesco Capparelli, sole proprietorship, Piazza Giovanni XXIII 12, 87100 Cosenza, Italy,
-            VAT IT03978070781 — <button class="link contact" type="button">contact by email</button>.</p>
-        <p><strong>Service:</strong> WA-MCP lets businesses connect their WhatsApp Business Accounts through Meta's WhatsApp Business
-            Platform and manage customer conversations from a web console and from AI assistants they authorize. For customer
-            messages, the business is the controller and WA-MCP acts as its processor.</p>
-        <p><strong>Data processed:</strong> connected account and phone number identifiers and access tokens (stored encrypted);
-            contacts' phone numbers or WhatsApp IDs and profile names; message content, delivery and read statuses, media
-            references and, for WhatsApp Business app users, any chat history the business chooses to share; operator credentials and logs.</p>
-        <p><strong>Purpose:</strong> only to provide the service requested by the business (receiving, storing, displaying and sending
-            WhatsApp messages). Data is never sold, used for advertising or used to train AI models.</p>
-        <p><strong>Storage and retention:</strong> servers in the European Union; data is kept while the business uses the service
-            and deleted within 30 days of deactivation or of a request.</p>
-        <p><strong>Recipients:</strong> Meta Platforms (WhatsApp Business Platform) and, when enabled by the business, the AI assistant
-            it connects. No other disclosure unless required by law.</p>
-        <p><strong>Your rights:</strong> access, rectification, erasure, restriction, portability and objection — contact the controller
-            or the business you are chatting with; you may lodge a complaint with the Italian Data Protection Authority.</p>
-        <p id="data-deletion"><strong>Data deletion instructions:</strong> email the controller with the WhatsApp number or WhatsApp Business
-            Account concerned and the subject "WA-MCP data deletion"; businesses can also disconnect their account in WA-MCP
-            or remove the app's access in their Meta business portfolio settings. Deletion is confirmed within 30 days.</p>
-    </div>
+        <h2>1. Titolare del trattamento</h2>
+        <div class="card">
+            <p><strong>Francesco Capparelli</strong> — impresa individuale<br>
+                Piazza Giovanni XXIII, 12 · 87100 Cosenza (CS) · Italia<br>
+                P.IVA 03978070781<br>
+                Contatto: <button class="link contact" type="button" data-subject="WA-MCP privacy">scrivi una email</button></p>
+        </div>
+
+        <h2>2. Che cos'è WA-MCP</h2>
+        <p>WA-MCP è un servizio che consente alle aziende di collegare i propri account WhatsApp Business (tramite la
+            WhatsApp Business Platform di Meta) e di gestire le conversazioni con i clienti da un'interfaccia web e tramite
+            assistenti di intelligenza artificiale autorizzati dall'azienda. Per i messaggi scambiati tra un'azienda e i suoi
+            clienti, l'azienda è titolare del trattamento e WA-MCP agisce come responsabile del trattamento per suo conto.</p>
+
+        <h2>3. Quali dati trattiamo</h2>
+        <ul>
+            <li><strong>Dati degli account collegati:</strong> identificativi dell'account WhatsApp Business e dei numeri di telefono,
+                nome visualizzato, stato di qualità e il token di accesso concesso dall'azienda (conservato cifrato).</li>
+            <li><strong>Dati dei contatti:</strong> numero di telefono o identificativo WhatsApp, nome del profilo, eventuale nome
+                salvato in rubrica dall'azienda.</li>
+            <li><strong>Contenuto delle conversazioni:</strong> messaggi inviati e ricevuti, relativi stati di consegna e lettura,
+                riferimenti ai file multimediali; per gli account che usano anche l'app WhatsApp Business, la cronologia che
+                l'azienda decide di condividere.</li>
+            <li><strong>Dati degli operatori:</strong> credenziali di accesso all'interfaccia e registro delle operazioni.</li>
+        </ul>
+
+        <h2>4. Finalità e base giuridica</h2>
+        <p>Trattiamo i dati esclusivamente per fornire il servizio richiesto dall'azienda: ricevere, archiviare, visualizzare
+            e inviare messaggi WhatsApp, anche tramite assistenti automatici autorizzati. La base giuridica è l'esecuzione del
+            contratto con l'azienda cliente (art. 6.1.b GDPR); per i clienti finali dell'azienda, la base giuridica è quella
+            individuata dall'azienda titolare. I dati non vengono venduti, non sono usati per pubblicità e non sono usati per
+            addestrare modelli di intelligenza artificiale.</p>
+
+        <h2>5. Dove sono conservati e per quanto tempo</h2>
+        <p>I dati sono conservati su server nell'Unione Europea gestiti dal titolare. I messaggi restano archiviati finché
+            l'azienda mantiene attivo il servizio; alla disattivazione o su richiesta vengono cancellati entro 30 giorni.
+            I token di accesso sono cifrati e cancellati quando l'account viene scollegato.</p>
+
+        <h2>6. Destinatari</h2>
+        <p>I messaggi transitano attraverso la WhatsApp Business Platform di Meta Platforms, secondo le condizioni di WhatsApp.
+            Se l'azienda collega un assistente di intelligenza artificiale, i contenuti necessari a rispondere sono resi
+            disponibili a quell'assistente sotto il controllo dell'azienda. Non comunichiamo i dati ad altri soggetti, salvo
+            obblighi di legge.</p>
+
+        <h2>7. Diritti</h2>
+        <p>Puoi chiedere accesso, rettifica, cancellazione, limitazione o portabilità dei tuoi dati e opporti al trattamento,
+            scrivendo al titolare (punto 1) o all'azienda con cui stai conversando. Puoi presentare reclamo al Garante per la
+            protezione dei dati personali (<a href="https://www.garanteprivacy.it/" rel="noopener">garanteprivacy.it</a>).
+            Scrivendo <strong>STOP</strong> in una conversazione smetterai di ricevere messaggi avviati dall'azienda.</p>
+
+        <h2 id="eliminazione-dati">8. Come richiedere l'eliminazione dei dati</h2>
+        <div class="card">
+            <ol>
+                <li>Scrivi al titolare tramite il contatto al punto 1, indicando il numero WhatsApp o l'account WhatsApp Business
+                    interessato e l'oggetto "Eliminazione dati WA-MCP".</li>
+                <li>Le aziende possono anche scollegare il proprio account dall'interfaccia di WA-MCP o rimuovere l'accesso
+                    dell'app dalle impostazioni del proprio portfolio business su Meta.</li>
+                <li>Confermeremo la cancellazione di messaggi, contatti e token entro 30 giorni dalla richiesta.</li>
+            </ol>
+        </div>
+
+        <hr>
+
+        <h1 id="english" lang="en">WA-MCP Privacy Policy (English)</h1>
+        <div lang="en">
+            <p><strong>Controller:</strong> Francesco Capparelli, sole proprietorship, Piazza Giovanni XXIII 12, 87100 Cosenza, Italy,
+                VAT IT03978070781 — <button class="link contact" type="button" data-subject="WA-MCP privacy">contact by email</button>.</p>
+            <p><strong>Service:</strong> WA-MCP lets businesses connect their WhatsApp Business Accounts through Meta's WhatsApp Business
+                Platform and manage customer conversations from a web console and from AI assistants they authorize. For customer
+                messages, the business is the controller and WA-MCP acts as its processor.</p>
+            <p><strong>Data processed:</strong> connected account and phone number identifiers and access tokens (stored encrypted);
+                contacts' phone numbers or WhatsApp IDs and profile names; message content, delivery and read statuses, media
+                references and, for WhatsApp Business app users, any chat history the business chooses to share; operator credentials and logs.</p>
+            <p><strong>Purpose:</strong> only to provide the service requested by the business (receiving, storing, displaying and sending
+                WhatsApp messages). Data is never sold, used for advertising or used to train AI models.</p>
+            <p><strong>Storage and retention:</strong> servers in the European Union; data is kept while the business uses the service
+                and deleted within 30 days of deactivation or of a request.</p>
+            <p><strong>Recipients:</strong> Meta Platforms (WhatsApp Business Platform) and, when enabled by the business, the AI assistant
+                it connects. No other disclosure unless required by law.</p>
+            <p><strong>Your rights:</strong> access, rectification, erasure, restriction, portability and objection — contact the controller
+                or the business you are chatting with; you may lodge a complaint with the Italian Data Protection Authority.</p>
+            <p id="data-deletion"><strong>Data deletion instructions:</strong> email the controller with the WhatsApp number or WhatsApp Business
+                Account concerned and the subject "WA-MCP data deletion"; businesses can also disconnect their account in WA-MCP
+                or remove the app's access in their Meta business portfolio settings. Deletion is confirmed within 30 days.</p>
+        </div>
+    </section>
 </main>
 <script>
-    // L'indirizzo email non compare come testo nella pagina: viene composto solo al clic.
-    document.querySelectorAll('.contact').forEach(function (b) {
-        b.addEventListener('click', function () {
-            window.location.href = 'mailto:' + ['capparelli.fnc', 'gmail.com'].join('@') + '?subject=WA-MCP%20privacy';
+    (function () {
+        var select = document.getElementById('doc-select');
+        var docs = { 'sito': document.getElementById('sito'), 'wa-mcp': document.getElementById('wa-mcp') };
+
+        // Ogni ancora appartiene a un'informativa: #eliminazione-dati, #english e #data-deletion aprono WA-MCP.
+        function docForHash(hash) {
+            var id = (hash || '').replace('#', '');
+            if (!id) return 'sito';
+            if (docs[id]) return id;
+            var el = document.getElementById(id);
+            if (el && docs['wa-mcp'].contains(el)) return 'wa-mcp';
+            return 'sito';
+        }
+
+        function show(doc, scrollTarget) {
+            Object.keys(docs).forEach(function (k) { docs[k].hidden = k !== doc; });
+            select.value = doc;
+            document.title = (doc === 'wa-mcp' ? 'Privacy WA-MCP' : 'Privacy sito web') + ' · Francesco Capparelli';
+            if (scrollTarget) {
+                var el = document.getElementById(scrollTarget);
+                if (el && el !== docs[doc]) el.scrollIntoView();
+            }
+        }
+
+        select.addEventListener('change', function () {
+            history.replaceState(null, '', '#' + select.value);
+            show(select.value);
         });
-    });
+        window.addEventListener('hashchange', function () {
+            show(docForHash(location.hash), location.hash.replace('#', ''));
+        });
+        show(docForHash(location.hash), location.hash.replace('#', ''));
+
+        // L'indirizzo email non compare come testo nella pagina: viene composto solo al clic.
+        document.querySelectorAll('.contact').forEach(function (b) {
+            b.addEventListener('click', function () {
+                var subject = encodeURIComponent(b.getAttribute('data-subject') || 'Privacy');
+                window.location.href = 'mailto:' + ['capparelli.fnc', 'gmail.com'].join('@') + '?subject=' + subject;
+            });
+        });
+    })();
 </script>
 </body>
 </html>
