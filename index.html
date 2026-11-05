@@ -40,6 +40,10 @@
 
     <!-- Tema e lingua applicati prima del rendering per evitare sfarfallii -->
     <script>
+        // Passa sempre alla versione sicura del sito (finché GitHub non forza HTTPS da sé)
+        if (location.protocol === 'http:' && location.hostname.indexOf('francescocapparelli.it') !== -1) {
+            location.replace('https://' + location.host + location.pathname + location.search + location.hash);
+        }
         (function () {
             var d = document.documentElement;
             d.classList.remove('no-js');
